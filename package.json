@@ -1,0 +1,24 @@
+{
+  "name": "the-hikers-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustaborges/the-hikers-journal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustaborges/the-hikers-journal/issues"
+  },
+  "homepage": "https://github.com/gustaborges/the-hikers-journal#readme",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
