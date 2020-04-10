@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gustaborges/the-hikers-journal#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "lite-server": "^2.5.4"
   }
 }

@@ -1,3 +1,304 @@
-.navbar {
-    
+* {
+    box-sizing: border-box;
 }
+body {
+    background: #f6f6f6;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+p ul {
+    padding-inline-start: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index:1;
+}
+.navbar .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;    
+    flex-direction: column;
+}
+
+.navbar-search {
+    display:none;
+}
+
+.collapse {
+    height:80px;
+    overflow: hidden;
+}
+
+.expand {
+    height:100%;
+}
+
+#menu-toggler {
+    position: absolute;
+    top:30px;
+    right: 30px;
+}
+
+.collapse-animate {
+    transition: height 0.2s ease-in-out;
+}
+
+.navbar .navbar-logo {
+    margin: 0 20px;
+    width:100%;
+}
+
+.logo-text {
+    font-family: Ubuntu;
+    font-style: normal;  
+    font-weight:bold;
+    font-size: 20px;
+    color: #000000;
+}
+
+.navbar .navbar-logo  .logo-text {
+    font-size: 20px;
+}
+
+.navbar .navbar-nav {
+    font-family: Ubuntu;
+    font-style:normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    list-style: none;
+
+    width:100%;
+    display:block;
+}
+
+.navbar .navbar-nav .nav-item { 
+    width:90%;
+}
+
+.navbar .navbar-nav .nav-item a{
+    display:block;
+    padding:15px 5px;
+
+    color:rgb(0, 0, 0);
+    opacity: 0.6;
+    transition:opacity 0.1s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-item a:hover{
+    opacity: 0.8;
+}
+
+/* Active Menu Link */
+.navbar .navbar-nav .active a{
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.navbar .navbar-search {
+    align-self:center;
+    width:50px;
+}
+
+#header {
+    height: 500px;
+    position:relative;
+}
+
+#header .header-filler {
+    background-image: url('/img/header_fill.jpg');
+    height:100%;
+    background-position: center;
+    background-size: cover;
+
+    display:flex;
+    flex: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .header-label {
+    margin-top:30px;
+    /* Font Style */
+    font-family: Slabo 15px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    /* Dark background */
+    width: 70%;
+    max-width:400px;
+    background: rgba(0, 0, 0, 0.33);
+    padding: 30px;
+}
+
+
+.container {
+    max-width:1600px;
+    margin: 0 auto;
+}
+
+
+.card-container {
+    /*Positioning*/
+    margin-top:50px;
+    /*Flex*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.card {
+    max-width:300px;
+    width: 90%;    
+
+    background:#FFFFFF;
+    margin:20px; /*Distância mínima entre os cards*/
+
+    max-width: 450px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card .card-media {
+    width: 100%;
+}
+
+.card .card-content {
+    padding:10px 40px 30px 40px;
+    text-align: center; 
+    font-style: normal;
+    font-weight: normal;  
+}
+
+.card .card-content .card-header {
+    font-family: Ubuntu;
+
+    font-size: 15px;
+    line-height: 35px;       
+    color: #000000;
+}
+
+.card .card-content .card-body {
+    /* Positioning*/
+    padding: 5px 0px 15px 0px;
+    /* Font Style*/
+    line-height: 18px; 
+    color: #B0B0B0;
+}
+
+.card .card-content .card-footer {
+    /* Font Style*/
+    line-height: 18px;    
+    color: #B0B0B0;
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.card .card-content .card-footer a {
+    color: #B0B0B0;
+}
+
+#footer {
+    height: 100px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .footer-links li {
+    display: inline;
+    padding: 0 10px;
+}
+
+#footer .footer-links li a {
+    color: #000000;
+}
+
+.font-roboto-text {
+    font-family: Roboto;
+    font-size: 15px;   
+    color: #000000;
+}
+
+/* TABLET */
+@media all and (min-width: 600px) {
+    .card {
+        max-width: 255px;
+    }
+}
+
+
+
+/* DESKTOP*/
+@media all and (min-width: 788px) {
+    #menu-toggler {
+        display:none !important;
+    }
+
+    .navbar {
+        height: auto;
+    }
+    
+    .navbar .container {
+        flex-direction: row;    
+    }
+
+    .navbar .navbar-search {
+        margin-left:40px;
+    }
+
+    .navbar .navbar-nav {  
+        display: inline-flex;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding: 0 5px;
+        width:auto;
+    }
+
+    .navbar .navbar-nav .nav-item a { 
+        padding: 15px 20px;
+        width:auto;
+    }
+
+    .navbar-search {
+        display:inline;
+    }
+
+    .navbar .navbar-logo {  
+        width:auto;
+    }
+
+    .card-container {
+        padding: 0 50px;
+    }
+    .card {
+        width: auto;
+        max-width: 275px;
+    }
+}
+
